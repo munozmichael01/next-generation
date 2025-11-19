@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import html2canvas from 'html2canvas'
 import jsPDF from 'jspdf'
 import Header from '@/components/Header'
@@ -8,19 +8,25 @@ import Footer from '@/components/Footer'
 
 export default function Home() {
   const contentRef = useRef<HTMLDivElement>(null)
+  const [isGeneratingPDF, setIsGeneratingPDF] = useState(false)
 
   const handleDownloadPDF = async () => {
     if (!contentRef.current) return
 
     try {
+      setIsGeneratingPDF(true)
+
+      // Esperar un momento para que el botón se oculte
+      await new Promise(resolve => setTimeout(resolve, 100))
+
       const canvas = await html2canvas(contentRef.current, {
-        scale: 1,
+        scale: 2, // Aumentado de 1 a 2 para mejor calidad
         useCORS: true,
         logging: false,
         backgroundColor: '#FFFFFF',
       })
 
-      const imgData = canvas.toDataURL('image/jpeg', 0.75)
+      const imgData = canvas.toDataURL('image/jpeg', 0.95) // Aumentado de 0.75 a 0.95 para mejor calidad
       const pdf = new jsPDF({
         orientation: 'portrait',
         unit: 'mm',
@@ -53,13 +59,15 @@ export default function Home() {
     } catch (error) {
       console.error('Error generando PDF:', error)
       alert('Hubo un error al generar el PDF. Por favor, intenta nuevamente.')
+    } finally {
+      setIsGeneratingPDF(false)
     }
   }
 
   return (
     <>
       <Header />
-      
+
       <main className="min-h-screen pt-16">
         <div ref={contentRef}>
           {/* Hero Section */}
@@ -75,25 +83,27 @@ export default function Home() {
                 <p className="text-xl md:text-2xl text-carbon-600 mb-12 max-w-3xl mx-auto">
                   Resumen de avances clave, impacto y hoja de ruta estratégica
                 </p>
-                <button 
-                  onClick={handleDownloadPDF}
-                  className="bg-peach-700 hover:bg-peach-300 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors shadow-lg hover:shadow-xl"
-                >
-                  📥 Descargar PDF
-                </button>
+                {!isGeneratingPDF && (
+                  <button
+                    onClick={handleDownloadPDF}
+                    className="bg-peach-700 hover:bg-peach-300 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors shadow-lg hover:shadow-xl"
+                  >
+                    📥 Descargar PDF
+                  </button>
+                )}
               </div>
             </div>
           </section>
 
           {/* Introduction Section */}
-          <section id="intro" className="py-16 px-6 bg-carbon-100">
+          <section id="intro" className="py-16 px-6 bg-carbon-100" style={{ pageBreakInside: 'avoid' }}>
             <div className="max-w-6xl mx-auto">
               <h2 className="text-4xl font-bold font-abcgintonord text-carbon-900 mb-6">
                 Introducción
               </h2>
               <div className="bg-white p-8 rounded-lg shadow-md">
                 <p className="text-lg text-carbon-900 leading-relaxed mb-4">
-                  Durante 2025, el equipo de Producto y Tecnología de Turijobs ha trabajado en la evolución y mejora continua de nuestra plataforma, 
+                  Durante 2025, el equipo de Producto y Tecnología de Turijobs ha trabajado en la evolución y mejora continua de nuestra plataforma,
                   con el objetivo de ofrecer la mejor experiencia tanto para candidatos como para empresas en el mercado laboral turístico.
                 </p>
                 <p className="text-lg text-carbon-900 leading-relaxed">
@@ -104,7 +114,7 @@ export default function Home() {
           </section>
 
           {/* Milestones Preview */}
-          <section id="milestones" className="py-16 px-6 bg-white">
+          <section id="milestones" className="py-16 px-6 bg-white" style={{ pageBreakInside: 'avoid' }}>
             <div className="max-w-6xl mx-auto">
               <h2 className="text-4xl font-bold font-abcgintonord text-carbon-900 mb-12 text-center">
                 Hitos de Producto 2025
@@ -135,7 +145,7 @@ export default function Home() {
           </section>
 
           {/* Product Milestones - DETAILED */}
-          <section className="py-16 px-6 bg-carbon-100">
+          <section className="py-16 px-6 bg-carbon-100" style={{ pageBreakInside: 'avoid' }}>
             <div className="max-w-6xl mx-auto">
               <h2 className="text-4xl font-bold font-abcgintonord text-carbon-900 mb-12 text-center">
                 Detalles de Hitos 2025
@@ -168,19 +178,19 @@ export default function Home() {
           </section>
 
           {/* Roadmap Preview */}
-          <section id="roadmap" className="py-16 px-6 bg-carbon-100">
+          <section id="roadmap" className="py-16 px-6 bg-carbon-100" style={{ pageBreakInside: 'avoid' }}>
             <div className="max-w-6xl mx-auto">
               <h2 className="text-4xl font-bold font-abcgintonord text-carbon-900 mb-12 text-center">
                 Roadmap 2026
               </h2>
               <div className="space-y-8">
                 {[
-                  { 
+                  {
                     quarter: 'Q1 2026',
                     items: ['App B2C (Flutter)', 'Search migration to Elastic', 'Salesforce marketing/data cloud'],
                     color: 'border-peach-700'
                   },
-                  { 
+                  {
                     quarter: 'Q2 2026',
                     items: ['Search & Matching: CV Search + IA', 'Admin B2B', 'Calculadora de salarios'],
                     color: 'border-peach-300'
@@ -205,7 +215,7 @@ export default function Home() {
           </section>
 
           {/* Tech Achievements */}
-          <section className="py-16 px-6 bg-carbon-100">
+          <section className="py-16 px-6 bg-carbon-100" style={{ pageBreakInside: 'avoid' }}>
             <div className="max-w-6xl mx-auto">
               <h2 className="text-4xl font-bold font-abcgintonord text-carbon-900 mb-12 text-center">
                 Logros Tecnológicos 2025
@@ -237,7 +247,7 @@ export default function Home() {
           </section>
 
           {/* Impact Metrics */}
-          <section className="py-16 px-6 bg-white">
+          <section className="py-16 px-6 bg-white" style={{ pageBreakInside: 'avoid' }}>
             <div className="max-w-6xl mx-auto">
               <h2 className="text-4xl font-bold font-abcgintonord text-carbon-900 mb-12 text-center">
                 Impacto Global 2025
@@ -263,7 +273,7 @@ export default function Home() {
           </section>
 
           {/* Tech Stack */}
-          <section className="py-16 px-6 bg-carbon-100">
+          <section className="py-16 px-6 bg-carbon-100" style={{ pageBreakInside: 'avoid' }}>
             <div className="max-w-6xl mx-auto">
               <h2 className="text-4xl font-bold font-abcgintonord text-carbon-900 mb-12 text-center">
                 Stack Tecnológico 2025
@@ -307,7 +317,7 @@ export default function Home() {
           </section>
 
           {/* Team & Culture */}
-          <section className="py-16 px-6 bg-white">
+          <section className="py-16 px-6 bg-white" style={{ pageBreakInside: 'avoid' }}>
             <div className="max-w-6xl mx-auto">
               <h2 className="text-4xl font-bold font-abcgintonord text-carbon-900 mb-12 text-center">
                 Equipo & Cultura
@@ -374,7 +384,7 @@ export default function Home() {
           </section>
 
           {/* Closing */}
-          <section className="py-16 px-6 bg-carbon-100">
+          <section className="py-16 px-6 bg-carbon-100" style={{ pageBreakInside: 'avoid' }}>
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-4xl font-bold font-abcgintonord text-carbon-900 mb-6">
                 ¡Gracias por ser parte de este viaje!
