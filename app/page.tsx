@@ -20,13 +20,13 @@ export default function Home() {
       await new Promise(resolve => setTimeout(resolve, 100))
 
       const canvas = await html2canvas(contentRef.current, {
-        scale: 2, // Aumentado de 1 a 2 para mejor calidad
+        scale: 1.5, // Balance entre calidad y rendimiento
         useCORS: true,
         logging: false,
         backgroundColor: '#FFFFFF',
       })
 
-      const imgData = canvas.toDataURL('image/jpeg', 0.95) // Aumentado de 0.75 a 0.95 para mejor calidad
+      const imgData = canvas.toDataURL('image/jpeg', 0.85) // Balance entre calidad y tamaño
       const pdf = new jsPDF({
         orientation: 'portrait',
         unit: 'mm',
