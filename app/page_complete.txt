@@ -1,0 +1,9 @@
+Sections to add after line 172:
+
+1. Tech Achievements section (Logros Tecnológicos 2025)
+2. Impact Metrics section (Impacto Global 2025)  
+3. Tech Stack section (Stack Tecnológico 2025)
+4. Team & Culture section (Equipo & Cultura)
+5. Closing section (¡Gracias por ser parte de este viaje!)
+
+These 5 sections need to be inserted between the existing Roadmap section and the closing tags.

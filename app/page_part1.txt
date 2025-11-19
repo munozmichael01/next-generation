@@ -1,0 +1,64 @@
+'use client'
+
+import { useRef } from 'react'
+import html2canvas from 'html2canvas'
+import jsPDF from 'jspdf'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
+
+export default function Home() {
+  const contentRef = useRef<HTMLDivElement>(null)
+
+  const handleDownloadPDF = async () => {
+    if (!contentRef.current) return
+
+    try {
+      const canvas = await html2canvas(contentRef.current, {
+        scale: 1,
+        useCORS: true,
+        logging: false,
+        backgroundColor: '#FFFFFF',
+      })
+
+      const imgData = canvas.toDataURL('image/jpeg', 0.75)
+      const pdf = new jsPDF({
+        orientation: 'portrait',
+        unit: 'mm',
+        format: 'a4',
+        compress: true,
+      })
+
+      const pdfWidth = pdf.internal.pageSize.getWidth()
+      const pdfHeight = pdf.internal.pageSize.getHeight()
+      const imgWidth = canvas.width
+      const imgHeight = canvas.height
+
+      const ratio = pdfWidth / imgWidth
+      const scaledHeight = imgHeight * ratio
+
+      let heightLeft = scaledHeight
+      let position = 0
+
+      pdf.addImage(imgData, 'JPEG', 0, position, pdfWidth, scaledHeight, undefined, 'FAST')
+      heightLeft -= pdfHeight
+
+      while (heightLeft > 0) {
+        position = heightLeft - scaledHeight
+        pdf.addPage()
+        pdf.addImage(imgData, 'JPEG', 0, position, pdfWidth, scaledHeight, undefined, 'FAST')
+        heightLeft -= pdfHeight
+      }
+
+      pdf.save('Turijobs-Highlights-2025.pdf')
+    } catch (error) {
+      console.error('Error generando PDF:', error)
+      alert('Hubo un error al generar el PDF. Por favor, intenta nuevamente.')
+    }
+  }
+
+  return (
+    <>
+      <Header />
+
+      <main className="min-h-screen pt-16">
+        <div ref={contentRef}>
