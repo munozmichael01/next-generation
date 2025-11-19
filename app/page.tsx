@@ -173,6 +173,121 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
+
+                {/* Milestone 2 */}
+                <div className="bg-white rounded-lg overflow-hidden shadow-lg">
+                  <div className="md:flex md:flex-row-reverse">
+                    <div className="md:w-1/2 bg-carbon-200 flex items-center justify-center p-8 min-h-[300px]">
+                      <div className="text-center text-carbon-500">
+                        <div className="w-48 h-48 mx-auto bg-carbon-300 rounded-lg flex items-center justify-center">
+                          <span className="text-6xl">🔍</span>
+                        </div>
+                        <p className="mt-4 text-sm font-medium">Imagen - Buscador</p>
+                      </div>
+                    </div>
+                    <div className="md:w-1/2 p-8">
+                      <span className="inline-block bg-peach-300 text-white text-xs font-bold px-3 py-1 rounded-full mb-4">Search</span>
+                      <h3 className="text-3xl font-bold font-abcgintonord text-carbon-900 mb-4">Nuevo Buscador</h3>
+                      <p className="text-carbon-600 mb-6 text-lg">Sistema mejorado con filtros avanzados.</p>
+                      <div className="space-y-3">
+                        <div className="flex items-start"><span className="text-peach-700 font-bold mr-2 mt-1 text-xl">▸</span><span className="text-carbon-900 text-lg"><strong>KPI:</strong> +50% precisión</span></div>
+                        <div className="flex items-start"><span className="text-peach-700 font-bold mr-2 mt-1 text-xl">▸</span><span className="text-carbon-900 text-lg"><strong>Impacto:</strong> +28% conversión</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Milestone 3 */}
+                <div className="bg-white rounded-lg overflow-hidden shadow-lg">
+                  <div className="md:flex">
+                    <div className="md:w-1/2 bg-carbon-200 flex items-center justify-center p-8 min-h-[300px]">
+                      <div className="text-center text-carbon-500">
+                        <div className="w-48 h-48 mx-auto bg-carbon-300 rounded-lg flex items-center justify-center">
+                          <span className="text-6xl">✅</span>
+                        </div>
+                        <p className="mt-4 text-sm font-medium">Imagen - Multi-Apply V2</p>
+                      </div>
+                    </div>
+                    <div className="md:w-1/2 p-8">
+                      <span className="inline-block bg-peach-700 text-white text-xs font-bold px-3 py-1 rounded-full mb-4">B2C</span>
+                      <h3 className="text-3xl font-bold font-abcgintonord text-carbon-900 mb-4">Multi-Apply V2</h3>
+                      <p className="text-carbon-600 mb-6 text-lg">Aplicación múltiple simultánea con un solo clic y gestión inteligente de CVs.</p>
+                      <div className="space-y-3">
+                        <div className="flex items-start"><span className="text-peach-700 font-bold mr-2 mt-1 text-xl">▸</span><span className="text-carbon-900 text-lg"><strong>KPI:</strong> +65% aplicaciones por usuario</span></div>
+                        <div className="flex items-start"><span className="text-peach-700 font-bold mr-2 mt-1 text-xl">▸</span><span className="text-carbon-900 text-lg"><strong>Impacto:</strong> -70% tiempo de aplicación</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Milestone 4 */}
+                <div className="bg-white rounded-lg overflow-hidden shadow-lg border-l-4 border-carbon-500">
+                  <div className="md:flex md:flex-row-reverse">
+                    <div className="md:w-1/2 bg-carbon-200 flex items-center justify-center p-8 min-h-[300px]">
+                      <div className="text-center text-carbon-500">
+                        <div className="w-48 h-48 mx-auto bg-carbon-300 rounded-lg flex items-center justify-center">
+                          <span className="text-6xl">🏠</span>
+                        </div>
+                        <p className="mt-4 text-sm font-medium">Imagen - Home B2C</p>
+                      </div>
+                    </div>
+                    <div className="md:w-1/2 p-8">
+                      <span className="inline-block bg-carbon-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-4">En Progreso</span>
+                      <h3 className="text-3xl font-bold font-abcgintonord text-carbon-900 mb-4">Nueva Home B2C</h3>
+                      <p className="text-carbon-600 mb-6 text-lg">Rediseño de página principal con recomendaciones inteligentes y contenido personalizado basado en IA.</p>
+                      <div className="space-y-3">
+                        <div className="flex items-start"><span className="text-peach-700 font-bold mr-2 mt-1 text-xl">▸</span><span className="text-carbon-900 text-lg"><strong>Estado:</strong> En desarrollo - Q1 2026</span></div>
+                        <div className="flex items-start"><span className="text-peach-700 font-bold mr-2 mt-1 text-xl">▸</span><span className="text-carbon-900 text-lg"><strong>Objetivo:</strong> Aumentar retención y engagement</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Milestone 5 */}
+                <div className="bg-white rounded-lg overflow-hidden shadow-lg">
+                  <div className="md:flex">
+                    <div className="md:w-1/2 bg-carbon-200 flex items-center justify-center p-8 min-h-[300px]">
+                      <div className="text-center text-carbon-500">
+                        <div className="w-48 h-48 mx-auto bg-carbon-300 rounded-lg flex items-center justify-center">
+                          <span className="text-6xl">📈</span>
+                        </div>
+                        <p className="mt-4 text-sm font-medium">Imagen - Optimización SEO</p>
+                      </div>
+                    </div>
+                    <div className="md:w-1/2 p-8">
+                      <span className="inline-block bg-peach-300 text-white text-xs font-bold px-3 py-1 rounded-full mb-4">Marketing</span>
+                      <h3 className="text-3xl font-bold font-abcgintonord text-carbon-900 mb-4">Optimización SEO</h3>
+                      <p className="text-carbon-600 mb-6 text-lg">Mejoras técnicas de SEO con schema markup optimizado y Core Web Vitals mejorados.</p>
+                      <div className="space-y-3">
+                        <div className="flex items-start"><span className="text-peach-700 font-bold mr-2 mt-1 text-xl">▸</span><span className="text-carbon-900 text-lg"><strong>KPI:</strong> +42% tráfico orgánico</span></div>
+                        <div className="flex items-start"><span className="text-peach-700 font-bold mr-2 mt-1 text-xl">▸</span><span className="text-carbon-900 text-lg"><strong>Impacto:</strong> Top 3 en keywords principales</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Milestone 6 */}
+                <div className="bg-white rounded-lg overflow-hidden shadow-lg">
+                  <div className="md:flex md:flex-row-reverse">
+                    <div className="md:w-1/2 bg-carbon-200 flex items-center justify-center p-8 min-h-[300px]">
+                      <div className="text-center text-carbon-500">
+                        <div className="w-48 h-48 mx-auto bg-carbon-300 rounded-lg flex items-center justify-center">
+                          <span className="text-6xl">🎯</span>
+                        </div>
+                        <p className="mt-4 text-sm font-medium">Imagen - Skills Dataset</p>
+                      </div>
+                    </div>
+                    <div className="md:w-1/2 p-8">
+                      <span className="inline-block bg-peach-700 text-white text-xs font-bold px-3 py-1 rounded-full mb-4">Matching</span>
+                      <h3 className="text-3xl font-bold font-abcgintonord text-carbon-900 mb-4">Skills Dataset</h3>
+                      <p className="text-carbon-600 mb-6 text-lg">Base de datos normalizada con taxonomía unificada de habilidades del sector turístico.</p>
+                      <div className="space-y-3">
+                        <div className="flex items-start"><span className="text-peach-700 font-bold mr-2 mt-1 text-xl">▸</span><span className="text-carbon-900 text-lg"><strong>KPI:</strong> 5,000+ skills catalogadas</span></div>
+                        <div className="flex items-start"><span className="text-peach-700 font-bold mr-2 mt-1 text-xl">▸</span><span className="text-carbon-900 text-lg"><strong>Impacto:</strong> +38% precisión en matching</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
