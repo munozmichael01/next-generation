@@ -92,40 +92,32 @@ export default function MilestoneMedia({ milestoneId, media, isGeneratingPDF = f
     // If device mockup is specified, use DeviceFrameset
     if (currentMedia.device && currentMedia.device !== 'none') {
       const deviceType = currentMedia.device === 'iphone' ? 'iPhone X' : 'MacBook Pro'
-      // Calculate proper aspect ratios for device screens
-      // iPhone X: 375x812 (aspect ratio 0.462)
-      // MacBook Pro: 16:10 aspect ratio (visible screen area)
-      const deviceWidth = currentMedia.device === 'iphone' ? 320 : 600
-      const deviceHeight = currentMedia.device === 'iphone'
-        ? Math.round(deviceWidth * (812 / 375)) // ~692px for iPhone screen
-        : Math.round(deviceWidth * (10 / 16))   // ~375px for MacBook screen
+      // Use smaller dimensions to keep mockups compact while maintaining aspect ratios
+      // iPhone X: 375x812 aspect ratio
+      // MacBook Pro: 16:10 aspect ratio
+      const deviceWidth = currentMedia.device === 'iphone' ? 280 : 500
+      const screenHeight = currentMedia.device === 'iphone'
+        ? Math.round(deviceWidth * (812 / 375)) // Actual iPhone screen height
+        : Math.round(deviceWidth * (9 / 16))    // Shorter visible area for MacBook
 
       return (
-        <div style={{
-          maxHeight: currentMedia.device === 'iphone' ? '720px' : '450px',
-          overflow: 'hidden',
-          display: 'flex',
-          alignItems: 'flex-start',
-          justifyContent: 'center'
-        }}>
-          <DeviceFrameset device={deviceType} color="black" width={deviceWidth}>
-            <div style={{
-              width: '100%',
-              height: `${deviceHeight}px`,
-              overflow: 'hidden',
-              position: 'relative',
-              background: '#000'
-            }}>
-              <Image
-                src={currentMedia.src}
-                alt={currentMedia.alt || `${milestoneId} screenshot`}
-                fill
-                className="object-cover object-top"
-                sizes={`${deviceWidth}px`}
-              />
-            </div>
-          </DeviceFrameset>
-        </div>
+        <DeviceFrameset device={deviceType} color="black" width={deviceWidth}>
+          <div style={{
+            width: '100%',
+            height: `${screenHeight}px`,
+            overflow: 'hidden',
+            position: 'relative',
+            background: '#000'
+          }}>
+            <Image
+              src={currentMedia.src}
+              alt={currentMedia.alt || `${milestoneId} screenshot`}
+              fill
+              className="object-cover object-top"
+              sizes={`${deviceWidth}px`}
+            />
+          </div>
+        </DeviceFrameset>
       )
     }
 
