@@ -92,21 +92,29 @@ export default function MilestoneMedia({ milestoneId, media, isGeneratingPDF = f
     // If device mockup is specified, use DeviceFrameset
     if (currentMedia.device && currentMedia.device !== 'none') {
       const deviceType = currentMedia.device === 'iphone' ? 'iPhone X' : 'MacBook Pro'
+      // Calculate proper aspect ratios for device screens
+      // iPhone X: 375x812 (aspect ratio 0.462)
+      // MacBook Pro: 16:10 aspect ratio
+      const deviceWidth = currentMedia.device === 'iphone' ? 320 : 600
+      const deviceHeight = currentMedia.device === 'iphone'
+        ? Math.round(deviceWidth * (812 / 375)) // ~692px for iPhone
+        : Math.round(deviceWidth * (10 / 16))   // ~375px for MacBook
+
       return (
-        <DeviceFrameset device={deviceType} color="black" width={currentMedia.device === 'iphone' ? 320 : 600}>
+        <DeviceFrameset device={deviceType} color="black" width={deviceWidth}>
           <div style={{
             width: '100%',
-            height: currentMedia.device === 'iphone' ? '812px' : '900px',
+            height: `${deviceHeight}px`,
             overflow: 'hidden',
-            position: 'relative'
+            position: 'relative',
+            background: '#000'
           }}>
             <Image
               src={currentMedia.src}
               alt={currentMedia.alt || `${milestoneId} screenshot`}
-              width={currentMedia.device === 'iphone' ? 375 : 1440}
-              height={currentMedia.device === 'iphone' ? 2000 : 2000}
-              className="w-full h-auto object-cover object-top"
-              style={{ maxWidth: '100%', height: 'auto' }}
+              fill
+              className="object-cover object-top"
+              sizes={`${deviceWidth}px`}
             />
           </div>
         </DeviceFrameset>
