@@ -162,9 +162,8 @@ export default function Home() {
           </section>
 
           {/* Product Milestones - DETAILED */}
-          <section className="py-16 px-6 bg-carbon-100" style={{ pageBreakInside: 'avoid' }}>
-            <div className="max-w-6xl mx-auto">
-              <h2 className="text-4xl font-bold font-abcgintonord text-carbon-900 mb-12 text-center">
+          <section className="py-16 bg-carbon-100" style={{ pageBreakInside: 'avoid' }}>
+              <h2 className="text-4xl font-bold font-abcgintonord text-carbon-900 mb-12 text-center px-6">
                 {t('milestonesDetailTitle')}
               </h2>
               <div className="space-y-12">
@@ -300,7 +299,6 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </div>
           </section>
 
           {/* Roadmap Preview */}
