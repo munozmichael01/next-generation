@@ -93,15 +93,12 @@ export default function MilestoneMedia({ milestoneId, media, isGeneratingPDF = f
     if (currentMedia.device && currentMedia.device !== 'none') {
       const deviceType = currentMedia.device === 'iphone' ? 'iPhone X' : 'MacBook Pro'
       const deviceWidth = currentMedia.device === 'iphone' ? 280 : 500
-      // iPhone X: 375x812 = 2.165 aspect ratio
-      // MacBook Pro: 16:10 = 1.6 aspect ratio
-      const aspectRatio = currentMedia.device === 'iphone' ? '375/812' : '16/10'
 
       return (
         <DeviceFrameset device={deviceType} color="black" width={deviceWidth}>
           <div style={{
             width: '100%',
-            aspectRatio: aspectRatio,
+            height: '100%',
             overflow: 'hidden',
             position: 'relative',
             background: '#000'
