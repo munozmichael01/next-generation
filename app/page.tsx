@@ -171,14 +171,14 @@ export default function Home() {
                 {/* Milestone 1 */}
                 <div className="bg-white rounded-lg overflow-hidden shadow-lg">
                   <div className="md:flex">
-                    <div className="md:w-1/2">
+                    <div className="md:w-[70%]">
                       <MilestoneMedia
                         milestoneId="admin-b2c"
                         media={milestone1Media}
                         isGeneratingPDF={isGeneratingPDF}
                       />
                     </div>
-                    <div className="md:w-1/2 p-8">
+                    <div className="md:w-[30%] p-8">
                       <span className="inline-block bg-peach-700 text-white text-xs font-bold px-3 py-1 rounded-full mb-4">{t('categoryB2C')}</span>
                       <h3 className="text-3xl font-bold font-abcgintonord text-carbon-900 mb-4">{t('milestone1Title')}</h3>
                       <p className="text-carbon-600 mb-6 text-lg">{t('milestone1Description')}</p>
@@ -193,14 +193,14 @@ export default function Home() {
                 {/* Milestone 2 */}
                 <div className="bg-white rounded-lg overflow-hidden shadow-lg">
                   <div className="md:flex md:flex-row-reverse">
-                    <div className="md:w-1/2">
+                    <div className="md:w-[70%]">
                       <MilestoneMedia
                         milestoneId="new-search"
                         media={milestone2Media}
                         isGeneratingPDF={isGeneratingPDF}
                       />
                     </div>
-                    <div className="md:w-1/2 p-8">
+                    <div className="md:w-[30%] p-8">
                       <span className="inline-block bg-peach-300 text-white text-xs font-bold px-3 py-1 rounded-full mb-4">{t('categorySearch')}</span>
                       <h3 className="text-3xl font-bold font-abcgintonord text-carbon-900 mb-4">{t('milestone2Title')}</h3>
                       <p className="text-carbon-600 mb-6 text-lg">{t('milestone2Description')}</p>
@@ -215,14 +215,14 @@ export default function Home() {
                 {/* Milestone 3 */}
                 <div className="bg-white rounded-lg overflow-hidden shadow-lg">
                   <div className="md:flex">
-                    <div className="md:w-1/2">
+                    <div className="md:w-[70%]">
                       <MilestoneMedia
                         milestoneId="multi-apply"
                         media={milestone3Media}
                         isGeneratingPDF={isGeneratingPDF}
                       />
                     </div>
-                    <div className="md:w-1/2 p-8">
+                    <div className="md:w-[30%] p-8">
                       <span className="inline-block bg-peach-700 text-white text-xs font-bold px-3 py-1 rounded-full mb-4">{t('categoryB2C')}</span>
                       <h3 className="text-3xl font-bold font-abcgintonord text-carbon-900 mb-4">{t('milestone3Title')}</h3>
                       <p className="text-carbon-600 mb-6 text-lg">{t('milestone3Description')}</p>
@@ -237,14 +237,14 @@ export default function Home() {
                 {/* Milestone 4 */}
                 <div className="bg-white rounded-lg overflow-hidden shadow-lg border-l-4 border-carbon-500">
                   <div className="md:flex md:flex-row-reverse">
-                    <div className="md:w-1/2">
+                    <div className="md:w-[70%]">
                       <MilestoneMedia
                         milestoneId="home-b2c"
                         media={milestone4Media}
                         isGeneratingPDF={isGeneratingPDF}
                       />
                     </div>
-                    <div className="md:w-1/2 p-8">
+                    <div className="md:w-[30%] p-8">
                       <span className="inline-block bg-carbon-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-4">{t('categoryInProgress')}</span>
                       <h3 className="text-3xl font-bold font-abcgintonord text-carbon-900 mb-4">{t('milestone4Title')}</h3>
                       <p className="text-carbon-600 mb-6 text-lg">{t('milestone4Description')}</p>
@@ -259,14 +259,14 @@ export default function Home() {
                 {/* Milestone 5 */}
                 <div className="bg-white rounded-lg overflow-hidden shadow-lg">
                   <div className="md:flex">
-                    <div className="md:w-1/2">
+                    <div className="md:w-[70%]">
                       <MilestoneMedia
                         milestoneId="seo-optimization"
                         media={milestone5Media}
                         isGeneratingPDF={isGeneratingPDF}
                       />
                     </div>
-                    <div className="md:w-1/2 p-8">
+                    <div className="md:w-[30%] p-8">
                       <span className="inline-block bg-peach-300 text-white text-xs font-bold px-3 py-1 rounded-full mb-4">{t('categoryMarketing')}</span>
                       <h3 className="text-3xl font-bold font-abcgintonord text-carbon-900 mb-4">{t('milestone5Title')}</h3>
                       <p className="text-carbon-600 mb-6 text-lg">{t('milestone5Description')}</p>
@@ -281,14 +281,14 @@ export default function Home() {
                 {/* Milestone 6 */}
                 <div className="bg-white rounded-lg overflow-hidden shadow-lg">
                   <div className="md:flex md:flex-row-reverse">
-                    <div className="md:w-1/2">
+                    <div className="md:w-[70%]">
                       <MilestoneMedia
                         milestoneId="skills-dataset"
                         media={milestone6Media}
                         isGeneratingPDF={isGeneratingPDF}
                       />
                     </div>
-                    <div className="md:w-1/2 p-8">
+                    <div className="md:w-[30%] p-8">
                       <span className="inline-block bg-peach-700 text-white text-xs font-bold px-3 py-1 rounded-full mb-4">{t('categoryMatching')}</span>
                       <h3 className="text-3xl font-bold font-abcgintonord text-carbon-900 mb-4">{t('milestone6Title')}</h3>
                       <p className="text-carbon-600 mb-6 text-lg">{t('milestone6Description')}</p>
