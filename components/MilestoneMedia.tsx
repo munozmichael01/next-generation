@@ -2,11 +2,14 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
+import { DeviceFrameset } from 'react-device-frameset'
+import 'react-device-frameset/styles/marvel-devices.min.css'
 
 interface MediaItem {
   type: 'image' | 'video'
   src: string
   alt?: string
+  device?: 'iphone' | 'macbook' | 'none' // Type of device mockup
 }
 
 interface MilestoneMediaProps {
@@ -31,7 +34,7 @@ export default function MilestoneMedia({ milestoneId, media, isGeneratingPDF = f
     )
   }
 
-  // For PDF generation, show only the first image
+  // For PDF generation, show only the first image without device frame
   if (isGeneratingPDF) {
     const firstImage = media.find(item => item.type === 'image') || media[0]
     if (firstImage.type === 'image') {
@@ -71,29 +74,54 @@ export default function MilestoneMedia({ milestoneId, media, isGeneratingPDF = f
     setCurrentIndex((prev) => (prev - 1 + media.length) % media.length)
   }
 
-  return (
-    <div className="relative bg-carbon-200 flex items-center justify-center p-8 min-h-[300px]">
-      {/* Media Content */}
-      <div className="w-full h-full flex items-center justify-center">
-        {currentMedia.type === 'video' ? (
-          <video
-            key={currentMedia.src}
-            controls
-            className="rounded-lg max-h-[300px] w-auto"
-            poster={currentMedia.alt}
-          >
-            <source src={currentMedia.src} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        ) : (
+  const renderMediaContent = () => {
+    if (currentMedia.type === 'video') {
+      return (
+        <video
+          key={currentMedia.src}
+          controls
+          className="rounded-lg max-h-[400px] w-auto"
+          poster={currentMedia.alt}
+        >
+          <source src={currentMedia.src} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      )
+    }
+
+    // If device mockup is specified, use DeviceFrameset
+    if (currentMedia.device && currentMedia.device !== 'none') {
+      const deviceType = currentMedia.device === 'iphone' ? 'iPhone X' : 'MacBook Pro'
+      return (
+        <DeviceFrameset device={deviceType} color="black" width={currentMedia.device === 'iphone' ? 320 : 600}>
           <Image
             src={currentMedia.src}
             alt={currentMedia.alt || `${milestoneId} screenshot`}
-            width={400}
-            height={300}
-            className="rounded-lg object-cover"
+            width={currentMedia.device === 'iphone' ? 375 : 1440}
+            height={currentMedia.device === 'iphone' ? 812 : 900}
+            className="w-full h-full object-cover"
           />
-        )}
+        </DeviceFrameset>
+      )
+    }
+
+    // Default: show image without device frame
+    return (
+      <Image
+        src={currentMedia.src}
+        alt={currentMedia.alt || `${milestoneId} screenshot`}
+        width={400}
+        height={300}
+        className="rounded-lg object-cover max-h-[400px] w-auto"
+      />
+    )
+  }
+
+  return (
+    <div className="relative bg-carbon-200 flex items-center justify-center p-8 min-h-[400px]">
+      {/* Media Content */}
+      <div className="w-full h-full flex items-center justify-center">
+        {renderMediaContent()}
       </div>
 
       {/* Navigation Arrows - Only show if multiple items */}
@@ -101,7 +129,7 @@ export default function MilestoneMedia({ milestoneId, media, isGeneratingPDF = f
         <>
           <button
             onClick={prevSlide}
-            className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-carbon-900 rounded-full p-2 shadow-lg transition-all"
+            className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-carbon-900 rounded-full p-2 shadow-lg transition-all z-10"
             aria-label="Previous"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -110,7 +138,7 @@ export default function MilestoneMedia({ milestoneId, media, isGeneratingPDF = f
           </button>
           <button
             onClick={nextSlide}
-            className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-carbon-900 rounded-full p-2 shadow-lg transition-all"
+            className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-carbon-900 rounded-full p-2 shadow-lg transition-all z-10"
             aria-label="Next"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -119,7 +147,7 @@ export default function MilestoneMedia({ milestoneId, media, isGeneratingPDF = f
           </button>
 
           {/* Dots Indicator */}
-          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
             {media.map((_, index) => (
               <button
                 key={index}
@@ -135,7 +163,7 @@ export default function MilestoneMedia({ milestoneId, media, isGeneratingPDF = f
       )}
 
       {/* Media Type Badge */}
-      <div className="absolute top-4 right-4 bg-black/60 text-white text-xs px-2 py-1 rounded">
+      <div className="absolute top-4 right-4 bg-black/60 text-white text-xs px-2 py-1 rounded z-10">
         {currentIndex + 1} / {media.length}
       </div>
     </div>

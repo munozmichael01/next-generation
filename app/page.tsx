@@ -14,6 +14,19 @@ export default function Home() {
   const [language, setLanguage] = useState<Language>('es')
 
   const t = (key: string) => getTranslation(language, key as any)
+  // Media configurations for each milestone
+  const milestone1Media = [
+    { type: 'image' as const, src: '/milestones/milestone-1/MisPreferencias-mobile-1.png', device: 'iphone' as const, alt: 'Admin B2C Mobile - Preferencias' },
+    { type: 'image' as const, src: '/milestones/milestone-1/AdminB2C-MisOfertas-Small-dektop-2.png', device: 'macbook' as const, alt: 'Admin B2C Desktop - Mis Ofertas' },
+    { type: 'image' as const, src: '/milestones/milestone-1/MiPerfil-mobile-2.jpg', device: 'iphone' as const, alt: 'Admin B2C Mobile - Mi Perfil' },
+  ]
+
+  const milestone2Media = milestone1Media
+  const milestone3Media = milestone1Media
+  const milestone4Media = milestone1Media
+  const milestone5Media = milestone1Media
+  const milestone6Media = milestone1Media
+
 
   const handleDownloadPDF = async () => {
     if (!contentRef.current) return
@@ -161,7 +174,7 @@ export default function Home() {
                     <div className="md:w-1/2">
                       <MilestoneMedia
                         milestoneId="admin-b2c"
-                        media={[]}
+                        media={milestone1Media}
                         isGeneratingPDF={isGeneratingPDF}
                       />
                     </div>
@@ -183,7 +196,7 @@ export default function Home() {
                     <div className="md:w-1/2">
                       <MilestoneMedia
                         milestoneId="new-search"
-                        media={[]}
+                        media={milestone2Media}
                         isGeneratingPDF={isGeneratingPDF}
                       />
                     </div>
@@ -205,7 +218,7 @@ export default function Home() {
                     <div className="md:w-1/2">
                       <MilestoneMedia
                         milestoneId="multi-apply"
-                        media={[]}
+                        media={milestone3Media}
                         isGeneratingPDF={isGeneratingPDF}
                       />
                     </div>
@@ -227,7 +240,7 @@ export default function Home() {
                     <div className="md:w-1/2">
                       <MilestoneMedia
                         milestoneId="home-b2c"
-                        media={[]}
+                        media={milestone4Media}
                         isGeneratingPDF={isGeneratingPDF}
                       />
                     </div>
@@ -249,7 +262,7 @@ export default function Home() {
                     <div className="md:w-1/2">
                       <MilestoneMedia
                         milestoneId="seo-optimization"
-                        media={[]}
+                        media={milestone5Media}
                         isGeneratingPDF={isGeneratingPDF}
                       />
                     </div>
@@ -271,7 +284,7 @@ export default function Home() {
                     <div className="md:w-1/2">
                       <MilestoneMedia
                         milestoneId="skills-dataset"
-                        media={[]}
+                        media={milestone6Media}
                         isGeneratingPDF={isGeneratingPDF}
                       />
                     </div>
