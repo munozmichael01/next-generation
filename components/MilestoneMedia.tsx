@@ -97,24 +97,30 @@ export default function MilestoneMedia({ milestoneId, media, isGeneratingPDF = f
       const maxScreenHeight = currentMedia.device === 'iphone' ? 500 : 280
 
       return (
-        <DeviceFrameset device={deviceType} color="black" width={deviceWidth}>
-          <div style={{
-            width: '100%',
-            maxHeight: `${maxScreenHeight}px`,
-            overflow: 'hidden',
-            position: 'relative',
-            background: '#000'
-          }}>
-            <Image
-              src={currentMedia.src}
-              alt={currentMedia.alt || `${milestoneId} screenshot`}
-              width={deviceWidth}
-              height={maxScreenHeight * 2}
-              className="w-full h-auto"
-              style={{ display: 'block' }}
-            />
-          </div>
-        </DeviceFrameset>
+        <div style={{
+          maxHeight: `${maxScreenHeight + 100}px`,
+          overflow: 'hidden',
+          display: 'inline-block'
+        }}>
+          <DeviceFrameset device={deviceType} color="black" width={deviceWidth}>
+            <div style={{
+              width: '100%',
+              maxHeight: `${maxScreenHeight}px`,
+              overflow: 'hidden',
+              position: 'relative',
+              background: '#000'
+            }}>
+              <Image
+                src={currentMedia.src}
+                alt={currentMedia.alt || `${milestoneId} screenshot`}
+                width={deviceWidth}
+                height={maxScreenHeight * 2}
+                className="w-full h-auto"
+                style={{ display: 'block' }}
+              />
+            </div>
+          </DeviceFrameset>
+        </div>
       )
     }
 
