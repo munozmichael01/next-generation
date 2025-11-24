@@ -21,11 +21,17 @@ export default function Home() {
     { type: 'image' as const, src: '/milestones/milestone-1/MiPerfil-mobile-2.jpg', device: 'none' as const, alt: 'Admin B2C Mobile - Mi Perfil' },
   ]
 
-  const milestone2Media = milestone1Media
-  const milestone3Media = milestone1Media
-  const milestone4Media = milestone1Media
-  const milestone5Media = milestone1Media
-  const milestone6Media = milestone1Media
+  // Milestones 2-6 use mockups (placeholder - same images with device frames)
+  const milestoneMediaWithMockups = [
+    { type: 'image' as const, src: '/milestones/milestone-1/MisPreferencias-mobile-1.png', device: 'iphone' as const, alt: 'Admin B2C Mobile - Preferencias' },
+    { type: 'image' as const, src: '/milestones/milestone-1/AdminB2C-MisOfertas-Small-dektop-2.png', device: 'macbook' as const, alt: 'Admin B2C Desktop - Mis Ofertas' },
+    { type: 'image' as const, src: '/milestones/milestone-1/MiPerfil-mobile-2.jpg', device: 'iphone' as const, alt: 'Admin B2C Mobile - Mi Perfil' },
+  ]
+  const milestone2Media = milestoneMediaWithMockups
+  const milestone3Media = milestoneMediaWithMockups
+  const milestone4Media = milestoneMediaWithMockups
+  const milestone5Media = milestoneMediaWithMockups
+  const milestone6Media = milestoneMediaWithMockups
 
 
   const handleDownloadPDF = async () => {
