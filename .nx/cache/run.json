@@ -1,0 +1,21 @@
+{
+  "run": {
+    "command": "nx run shared-configs:sync",
+    "startTime": "2025-11-18T16:56:16.453Z",
+    "endTime": "2025-11-18T16:56:19.617Z",
+    "inner": false
+  },
+  "tasks": [
+    {
+      "taskId": "shared-configs:sync",
+      "target": "sync",
+      "projectName": "shared-configs",
+      "hash": "557f5feadbd6f16bb5cea6086b2ec5f603dd96a6d000f59961e76d52b3df8166",
+      "startTime": "2025-11-18T16:56:16.459Z",
+      "endTime": "2025-11-18T16:56:19.617Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    }
+  ]
+}

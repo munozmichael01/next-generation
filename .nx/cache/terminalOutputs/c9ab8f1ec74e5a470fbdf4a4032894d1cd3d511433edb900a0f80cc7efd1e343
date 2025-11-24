@@ -1,0 +1,692 @@
+--- LOCALES REDIRECTS --- 
+┌─────────┬───────────┐
+│ (index) │ Values    │
+├─────────┼───────────┤
+│ 0       │ 'default' │
+│ 1       │ 'es'      │
+│ 2       │ 'en'      │
+│ 3       │ 'pt'      │
+└─────────┴───────────┘
+--- REDIRECTS --- 
+┌─────────┬──────────────────────────────────────┬─────────────────────────────────────────┬───────────┬────────┐
+│ (index) │ source                               │ destination                             │ permanent │ locale │
+├─────────┼──────────────────────────────────────┼─────────────────────────────────────────┼───────────┼────────┤
+│ 0       │ '/es/about-us'                       │ '/es/nosotros'                          │ false     │ false  │
+│ 1       │ '/pt/about-us'                       │ '/pt/sobre-nos'                         │ false     │ false  │
+│ 2       │ '/es/search-offer/:slug*'            │ '/es/ofertas-trabajo/:slug*'            │ false     │ false  │
+│ 3       │ '/pt/search-offer/:slug*'            │ '/pt/pesquisa-ofertas/:slug*'           │ false     │ false  │
+│ 4       │ '/es/salary-search'                  │ '/es/buscador-salarios'                 │ false     │ false  │
+│ 5       │ '/pt/salary-search'                  │ '/pt/pesquisa-salarios'                 │ false     │ false  │
+│ 6       │ '/es/practice'                       │ '/es/practicas'                         │ false     │ false  │
+│ 7       │ '/pt/practice'                       │ '/pt/praticas'                          │ false     │ false  │
+│ 8       │ '/es/formation'                      │ '/es/formacion'                         │ false     │ false  │
+│ 9       │ '/pt/formation'                      │ '/pt/formacao'                          │ false     │ false  │
+│ 10      │ '/es/events'                         │ '/es/eventos'                           │ false     │ false  │
+│ 11      │ '/pt/events'                         │ '/pt/eventos'                           │ false     │ false  │
+│ 12      │ '/es/products'                       │ '/es/productos'                         │ false     │ false  │
+│ 13      │ '/pt/products'                       │ '/pt/produtos'                          │ false     │ false  │
+│ 14      │ '/es/pricing'                        │ '/es/precios'                           │ false     │ false  │
+│ 15      │ '/pt/pricing'                        │ '/pt/precos'                            │ false     │ false  │
+│ 16      │ '/es/login'                          │ '/es/inicia-sesion'                     │ false     │ false  │
+│ 17      │ '/pt/login'                          │ '/pt/iniciar-sessao'                    │ false     │ false  │
+│ 18      │ '/es/sign-up'                        │ '/es/registrar-cv'                      │ false     │ false  │
+│ 19      │ '/pt/sign-up'                        │ '/pt/registrar-cv'                      │ false     │ false  │
+│ 20      │ '/es/account'                        │ '/es/cuenta'                            │ false     │ false  │
+│ 21      │ '/pt/account'                        │ '/pt/conta'                             │ false     │ false  │
+│ 22      │ '/es/account/profile'                │ '/es/cuenta/perfil'                     │ false     │ false  │
+│ 23      │ '/pt/account/profile'                │ '/pt/conta/perfil'                      │ false     │ false  │
+│ 24      │ '/es/account/preferences'            │ '/es/cuenta/preferencias'               │ false     │ false  │
+│ 25      │ '/pt/account/preferences'            │ '/pt/conta/preferencias'                │ false     │ false  │
+│ 26      │ '/es/account/offers'                 │ '/es/cuenta/ofertas'                    │ false     │ false  │
+│ 27      │ '/pt/account/offers'                 │ '/pt/conta/ofertas'                     │ false     │ false  │
+│ 28      │ '/es/account/reviews'                │ '/es/cuenta/valoraciones'               │ false     │ false  │
+│ 29      │ '/pt/account/reviews'                │ '/pt/conta/valoracoes'                  │ false     │ false  │
+│ 30      │ '/es/account/messages'               │ '/es/cuenta/mensajes'                   │ false     │ false  │
+│ 31      │ '/pt/account/messages'               │ '/pt/conta/mensagens'                   │ false     │ false  │
+│ 32      │ '/es/account/companies'              │ '/es/cuenta/empresas'                   │ false     │ false  │
+│ 33      │ '/pt/account/companies'              │ '/pt/conta/empresas'                    │ false     │ false  │
+│ 34      │ '/es/account/alerts'                 │ '/es/cuenta/alertas'                    │ false     │ false  │
+│ 35      │ '/pt/account/alerts'                 │ '/pt/conta/alertas'                     │ false     │ false  │
+│ 36      │ '/es/account/notifications'          │ '/es/cuenta/notificaciones'             │ false     │ false  │
+│ 37      │ '/pt/account/notifications'          │ '/pt/conta/notificacoes'                │ false     │ false  │
+│ 38      │ '/es/account/metrics'                │ '/es/cuenta/metricas'                   │ false     │ false  │
+│ 39      │ '/pt/account/metrics'                │ '/pt/conta/metricas'                    │ false     │ false  │
+│ 40      │ '/es/account/applications'           │ '/es/cuenta/solicitudes'                │ false     │ false  │
+│ 41      │ '/pt/account/applications'           │ '/pt/conta/solicitudes'                 │ false     │ false  │
+│ 42      │ '/es/account/killer-questions'       │ '/es/cuenta/preguntas-muertas'          │ false     │ false  │
+│ 43      │ '/pt/account/killer-questions'       │ '/pt/conta/perguntas-mortas'            │ false     │ false  │
+│ 44      │ '/es/account/killer-questions/:slug' │ '/es/cuenta/preguntas-muertas/:slug'    │ false     │ false  │
+│ 45      │ '/pt/account/killer-questions/:slug' │ '/pt/conta/perguntas-mortas/:slug'      │ false     │ false  │
+│ 46      │ '/es/account/company'                │ '/es/cuenta/pagina-corporativa'         │ false     │ false  │
+│ 47      │ '/pt/account/company'                │ '/pt/conta/pagina-corporativa'          │ false     │ false  │
+│ 48      │ '/es/account/cv-search'              │ '/es/cuenta/buscar-cv'                  │ false     │ false  │
+│ 49      │ '/pt/account/cv-search'              │ '/pt/conta/buscar-cv'                   │ false     │ false  │
+│ 50      │ '/es/account/products'               │ '/es/cuenta/productos'                  │ false     │ false  │
+│ 51      │ '/pt/account/products'               │ '/pt/conta/productos'                   │ false     │ false  │
+│ 52      │ '/es/account/store'                  │ '/es/cuenta/contratar'                  │ false     │ false  │
+│ 53      │ '/pt/account/store'                  │ '/pt/conta/contratar'                   │ false     │ false  │
+│ 54      │ '/es/account/billing'                │ '/es/cuenta/facturacion'                │ false     │ false  │
+│ 55      │ '/pt/account/billing'                │ '/pt/conta/facturacao'                  │ false     │ false  │
+│ 56      │ '/es/account/settings'               │ '/es/cuenta/ajustes'                    │ false     │ false  │
+│ 57      │ '/pt/account/settings'               │ '/pt/conta/ajustes'                     │ false     │ false  │
+│ 58      │ '/es/agreements-and-partners'        │ '/es/contratos-y-socios'                │ false     │ false  │
+│ 59      │ '/pt/agreements-and-partners'        │ '/pt/parceiros-e-contratos'             │ false     │ false  │
+│ 60      │ '/es/companies'                      │ '/es/empresas'                          │ false     │ false  │
+│ 61      │ '/pt/companies'                      │ '/pt/empresas'                          │ false     │ false  │
+│ 62      │ '/es/company'                        │ '/es/empresa'                           │ false     │ false  │
+│ 63      │ '/pt/company'                        │ '/pt/empresa'                           │ false     │ false  │
+│ 64      │ '/es/companies/:slug'                │ '/es/empresas/:slug'                    │ false     │ false  │
+│ 65      │ '/pt/companies/:slug'                │ '/pt/empresas/:slug'                    │ false     │ false  │
+│ 66      │ '/es/company-sign-up'                │ '/es/empresa/registrarse'               │ false     │ false  │
+│ 67      │ '/pt/company-sign-up'                │ '/pt/empresa/registrar-se'              │ false     │ false  │
+│ 68      │ '/es/company-sign-up-success'        │ '/es/empresa/registrarse/satisfactorio' │ false     │ false  │
+│ 69      │ '/pt/company-sign-up-success'        │ '/pt/empresa/registrar-se/satisfatorio' │ false     │ false  │
+│ 70      │ '/es/contact'                        │ '/es/contacto'                          │ false     │ false  │
+│ 71      │ '/pt/contact'                        │ '/pt/contacto'                          │ false     │ false  │
+│ 72      │ '/es/faqs'                           │ '/es/preguntas-frecuentes'              │ false     │ false  │
+│ 73      │ '/pt/faqs'                           │ '/pt/perguntas-frequentes'              │ false     │ false  │
+│ 74      │ '/es/post-offer'                     │ '/es/publicar-oferta'                   │ false     │ false  │
+│ 75      │ '/pt/post-offer'                     │ '/pt/publicar-oferta'                   │ false     │ false  │
+│ 76      │ '/es/offer/:parent/:slug'            │ '/es/oferta/:parent/:slug'              │ false     │ false  │
+│ 77      │ '/pt/offer/:parent/:slug'            │ '/pt/oferta/:parent/:slug'              │ false     │ false  │
+│ 78      │ '/es/offer/:parent/:slug/apply'      │ '/es/oferta/:parent/:slug/aplicar'      │ false     │ false  │
+│ 79      │ '/pt/offer/:parent/:slug/apply'      │ '/pt/oferta/:parent/:slug/aplicar'      │ false     │ false  │
+│ 80      │ '/es/policies-cookies'               │ '/es/politica-de-cookies'               │ false     │ false  │
+│ 81      │ '/pt/policies-cookies'               │ '/pt/politica-de-cookies'               │ false     │ false  │
+│ 82      │ '/es/policies-privacy'               │ '/es/politica-de-privacidad'            │ false     │ false  │
+│ 83      │ '/pt/policies-privacy'               │ '/pt/politica-de-privacidade'           │ false     │ false  │
+│ 84      │ '/es/legal-notice'                   │ '/es/aviso-legal'                       │ false     │ false  │
+│ 85      │ '/pt/legal-notice'                   │ '/pt/aviso-legal'                       │ false     │ false  │
+│ 86      │ '/es/terms-of-use'                   │ '/es/terminos-de-uso'                   │ false     │ false  │
+│ 87      │ '/pt/terms-of-use'                   │ '/pt/termos-de-uso'                     │ false     │ false  │
+└─────────┴──────────────────────────────────────┴─────────────────────────────────────────┴───────────┴────────┘
+--- LOCALES REDIRECTS --- 
+┌─────────┬───────────┐
+│ (index) │ Values    │
+├─────────┼───────────┤
+│ 0       │ 'default' │
+│ 1       │ 'es'      │
+│ 2       │ 'en'      │
+│ 3       │ 'pt'      │
+└─────────┴───────────┘
+--- REWRITES --- 
+┌─────────┬─────────────────────────────────────────┬──────────────────────────────────────┬────────┐
+│ (index) │ source                                  │ destination                          │ locale │
+├─────────┼─────────────────────────────────────────┼──────────────────────────────────────┼────────┤
+│ 0       │ '/es/nosotros'                          │ '/es/about-us'                       │ false  │
+│ 1       │ '/pt/sobre-nos'                         │ '/pt/about-us'                       │ false  │
+│ 2       │ '/es/ofertas-trabajo/:slug*'            │ '/es/search-offer/:slug*'            │ false  │
+│ 3       │ '/pt/pesquisa-ofertas/:slug*'           │ '/pt/search-offer/:slug*'            │ false  │
+│ 4       │ '/es/buscador-salarios'                 │ '/es/salary-search'                  │ false  │
+│ 5       │ '/pt/pesquisa-salarios'                 │ '/pt/salary-search'                  │ false  │
+│ 6       │ '/es/practicas'                         │ '/es/practice'                       │ false  │
+│ 7       │ '/pt/praticas'                          │ '/pt/practice'                       │ false  │
+│ 8       │ '/es/formacion'                         │ '/es/formation'                      │ false  │
+│ 9       │ '/pt/formacao'                          │ '/pt/formation'                      │ false  │
+│ 10      │ '/es/eventos'                           │ '/es/events'                         │ false  │
+│ 11      │ '/pt/eventos'                           │ '/pt/events'                         │ false  │
+│ 12      │ '/es/productos'                         │ '/es/products'                       │ false  │
+│ 13      │ '/pt/produtos'                          │ '/pt/products'                       │ false  │
+│ 14      │ '/es/precios'                           │ '/es/pricing'                        │ false  │
+│ 15      │ '/pt/precos'                            │ '/pt/pricing'                        │ false  │
+│ 16      │ '/es/inicia-sesion'                     │ '/es/login'                          │ false  │
+│ 17      │ '/pt/iniciar-sessao'                    │ '/pt/login'                          │ false  │
+│ 18      │ '/es/registrar-cv'                      │ '/es/sign-up'                        │ false  │
+│ 19      │ '/pt/registrar-cv'                      │ '/pt/sign-up'                        │ false  │
+│ 20      │ '/es/cuenta'                            │ '/es/account'                        │ false  │
+│ 21      │ '/pt/conta'                             │ '/pt/account'                        │ false  │
+│ 22      │ '/es/cuenta/perfil'                     │ '/es/account/profile'                │ false  │
+│ 23      │ '/pt/conta/perfil'                      │ '/pt/account/profile'                │ false  │
+│ 24      │ '/es/cuenta/preferencias'               │ '/es/account/preferences'            │ false  │
+│ 25      │ '/pt/conta/preferencias'                │ '/pt/account/preferences'            │ false  │
+│ 26      │ '/es/cuenta/ofertas'                    │ '/es/account/offers'                 │ false  │
+│ 27      │ '/pt/conta/ofertas'                     │ '/pt/account/offers'                 │ false  │
+│ 28      │ '/es/cuenta/valoraciones'               │ '/es/account/reviews'                │ false  │
+│ 29      │ '/pt/conta/valoracoes'                  │ '/pt/account/reviews'                │ false  │
+│ 30      │ '/es/cuenta/mensajes'                   │ '/es/account/messages'               │ false  │
+│ 31      │ '/pt/conta/mensagens'                   │ '/pt/account/messages'               │ false  │
+│ 32      │ '/es/cuenta/empresas'                   │ '/es/account/companies'              │ false  │
+│ 33      │ '/pt/conta/empresas'                    │ '/pt/account/companies'              │ false  │
+│ 34      │ '/es/cuenta/alertas'                    │ '/es/account/alerts'                 │ false  │
+│ 35      │ '/pt/conta/alertas'                     │ '/pt/account/alerts'                 │ false  │
+│ 36      │ '/es/cuenta/notificaciones'             │ '/es/account/notifications'          │ false  │
+│ 37      │ '/pt/conta/notificacoes'                │ '/pt/account/notifications'          │ false  │
+│ 38      │ '/es/cuenta/metricas'                   │ '/es/account/metrics'                │ false  │
+│ 39      │ '/pt/conta/metricas'                    │ '/pt/account/metrics'                │ false  │
+│ 40      │ '/es/cuenta/solicitudes'                │ '/es/account/applications'           │ false  │
+│ 41      │ '/pt/conta/solicitudes'                 │ '/pt/account/applications'           │ false  │
+│ 42      │ '/es/cuenta/preguntas-muertas'          │ '/es/account/killer-questions'       │ false  │
+│ 43      │ '/pt/conta/perguntas-mortas'            │ '/pt/account/killer-questions'       │ false  │
+│ 44      │ '/es/cuenta/preguntas-muertas/:slug'    │ '/es/account/killer-questions/:slug' │ false  │
+│ 45      │ '/pt/conta/perguntas-mortas/:slug'      │ '/pt/account/killer-questions/:slug' │ false  │
+│ 46      │ '/es/cuenta/pagina-corporativa'         │ '/es/account/company'                │ false  │
+│ 47      │ '/pt/conta/pagina-corporativa'          │ '/pt/account/company'                │ false  │
+│ 48      │ '/es/cuenta/buscar-cv'                  │ '/es/account/cv-search'              │ false  │
+│ 49      │ '/pt/conta/buscar-cv'                   │ '/pt/account/cv-search'              │ false  │
+│ 50      │ '/es/cuenta/productos'                  │ '/es/account/products'               │ false  │
+│ 51      │ '/pt/conta/productos'                   │ '/pt/account/products'               │ false  │
+│ 52      │ '/es/cuenta/contratar'                  │ '/es/account/store'                  │ false  │
+│ 53      │ '/pt/conta/contratar'                   │ '/pt/account/store'                  │ false  │
+│ 54      │ '/es/cuenta/facturacion'                │ '/es/account/billing'                │ false  │
+│ 55      │ '/pt/conta/facturacao'                  │ '/pt/account/billing'                │ false  │
+│ 56      │ '/es/cuenta/ajustes'                    │ '/es/account/settings'               │ false  │
+│ 57      │ '/pt/conta/ajustes'                     │ '/pt/account/settings'               │ false  │
+│ 58      │ '/es/contratos-y-socios'                │ '/es/agreements-and-partners'        │ false  │
+│ 59      │ '/pt/parceiros-e-contratos'             │ '/pt/agreements-and-partners'        │ false  │
+│ 60      │ '/es/empresas'                          │ '/es/companies'                      │ false  │
+│ 61      │ '/pt/empresas'                          │ '/pt/companies'                      │ false  │
+│ 62      │ '/es/empresa'                           │ '/es/company'                        │ false  │
+│ 63      │ '/pt/empresa'                           │ '/pt/company'                        │ false  │
+│ 64      │ '/es/empresas/:slug'                    │ '/es/companies/:slug'                │ false  │
+│ 65      │ '/pt/empresas/:slug'                    │ '/pt/companies/:slug'                │ false  │
+│ 66      │ '/es/empresa/registrarse'               │ '/es/company-sign-up'                │ false  │
+│ 67      │ '/pt/empresa/registrar-se'              │ '/pt/company-sign-up'                │ false  │
+│ 68      │ '/es/empresa/registrarse/satisfactorio' │ '/es/company-sign-up-success'        │ false  │
+│ 69      │ '/pt/empresa/registrar-se/satisfatorio' │ '/pt/company-sign-up-success'        │ false  │
+│ 70      │ '/es/contacto'                          │ '/es/contact'                        │ false  │
+│ 71      │ '/pt/contacto'                          │ '/pt/contact'                        │ false  │
+│ 72      │ '/es/preguntas-frecuentes'              │ '/es/faqs'                           │ false  │
+│ 73      │ '/pt/perguntas-frequentes'              │ '/pt/faqs'                           │ false  │
+│ 74      │ '/es/publicar-oferta'                   │ '/es/post-offer'                     │ false  │
+│ 75      │ '/pt/publicar-oferta'                   │ '/pt/post-offer'                     │ false  │
+│ 76      │ '/es/oferta/:parent/:slug'              │ '/es/offer/:parent/:slug'            │ false  │
+│ 77      │ '/pt/oferta/:parent/:slug'              │ '/pt/offer/:parent/:slug'            │ false  │
+│ 78      │ '/es/oferta/:parent/:slug/aplicar'      │ '/es/offer/:parent/:slug/apply'      │ false  │
+│ 79      │ '/pt/oferta/:parent/:slug/aplicar'      │ '/pt/offer/:parent/:slug/apply'      │ false  │
+│ 80      │ '/es/politica-de-cookies'               │ '/es/policies-cookies'               │ false  │
+│ 81      │ '/pt/politica-de-cookies'               │ '/pt/policies-cookies'               │ false  │
+│ 82      │ '/es/politica-de-privacidad'            │ '/es/policies-privacy'               │ false  │
+│ 83      │ '/pt/politica-de-privacidade'           │ '/pt/policies-privacy'               │ false  │
+│ 84      │ '/es/aviso-legal'                       │ '/es/legal-notice'                   │ false  │
+│ 85      │ '/pt/aviso-legal'                       │ '/pt/legal-notice'                   │ false  │
+│ 86      │ '/es/terminos-de-uso'                   │ '/es/terms-of-use'                   │ false  │
+│ 87      │ '/pt/termos-de-uso'                     │ '/pt/terms-of-use'                   │ false  │
+└─────────┴─────────────────────────────────────────┴──────────────────────────────────────┴────────┘
+warn  - Invalid next.config.js options detected: 
+  - The value at .i18n has an unexpected property, reloadOnPrerender, which is not in the list of allowed properties (defaultLocale, domains, localeDetection, locales).
+
+See more info here: https://nextjs.org/docs/messages/invalid-next-config
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+event - compiled client and server successfully in 6.4s (1172 modules)
+wait  - compiling...
+event - compiled successfully in 342 ms (918 modules)
+[ ready ] on http://localhost:4200
+wait  - compiling /middleware (client and server)...
+event - compiled successfully in 263 ms (66 modules)
+wait  - compiling / (client and server)...
+warn  - ../../node_modules/next-i18next/dist/commonjs/serverSideTranslations.js
+Critical dependency: the request of a dependency is an expression
+wait  - compiling...
+language es
+jobs []
+locations []
+warn  - ../../node_modules/next-i18next/dist/commonjs/serverSideTranslations.js
+Critical dependency: the request of a dependency is an expression
+language es
+jobs []
+locations []
+warn  - ../../node_modules/next-i18next/dist/commonjs/serverSideTranslations.js
+Critical dependency: the request of a dependency is an expression
+wait  - compiling /_error (client and server)...
+warn  - ../../node_modules/next-i18next/dist/commonjs/serverSideTranslations.js
+Critical dependency: the request of a dependency is an expression
+wait  - compiling...
+react-i18next:: You will need to pass in an i18next instance by using initReactI18next
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+warn  - ../../node_modules/next-i18next/dist/commonjs/serverSideTranslations.js
+Critical dependency: the request of a dependency is an expression
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language es
+jobs []
+locations []
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+warn  - ../../node_modules/next-i18next/dist/commonjs/serverSideTranslations.js
+Critical dependency: the request of a dependency is an expression
+wait  - compiling /account/metrics (client and server)...
+warn  - ../../node_modules/next-i18next/dist/commonjs/serverSideTranslations.js
+Critical dependency: the request of a dependency is an expression
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+warn  - ../../node_modules/next-i18next/dist/commonjs/serverSideTranslations.js
+Critical dependency: the request of a dependency is an expression
+wait  - compiling /account/profile (client and server)...
+warn  - ../../node_modules/next-i18next/dist/commonjs/serverSideTranslations.js
+Critical dependency: the request of a dependency is an expression
+language es
+userType null
+userData { userId: null, userType: null, firstName: null, lastName: null }
+userProfile null
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language undefined
+ERROR: BAD PAGE CONFIGURATION. MISSING SERVER SIDE LANGUAGE
+language es
+userType null
+userData { userId: null, userType: null, firstName: null, lastName: null }
+userProfile null
+warn  - ../../node_modules/next-i18next/dist/commonjs/serverSideTranslations.js
+Critical dependency: the request of a dependency is an expression
+wait  - compiling /account/applications/candidate/[slug] (client and server)...
+warn  - ../../node_modules/next-i18next/dist/commonjs/serverSideTranslations.js
+Critical dependency: the request of a dependency is an expression
+warn  - ../../node_modules/next-i18next/dist/commonjs/serverSideTranslations.js
+Critical dependency: the request of a dependency is an expression
+wait  - compiling /account/applications (client and server)...
+warn  - ../../node_modules/next-i18next/dist/commonjs/serverSideTranslations.js
+Critical dependency: the request of a dependency is an expression
+language es
+language es
+language es
+language es
+language es
+language es
+warn  - ../../node_modules/next-i18next/dist/commonjs/serverSideTranslations.js
+Critical dependency: the request of a dependency is an expression
+wait  - compiling /account/companies (client and server)...
+warn  - ../../node_modules/next-i18next/dist/commonjs/serverSideTranslations.js
+Critical dependency: the request of a dependency is an expression
+language es
+language es
+warn  - ../../node_modules/next-i18next/dist/commonjs/serverSideTranslations.js
+Critical dependency: the request of a dependency is an expression
+wait  - compiling / (client and server)...
+warn  - ../../node_modules/next-i18next/dist/commonjs/serverSideTranslations.js
+Critical dependency: the request of a dependency is an expression
+language es
+jobs []
+locations []
+language es
+jobs []
+locations []
+wait  - compiling...
+error - ../shared/configs/src/routes/i18n/aboutUs.ts
+Error: Failed to read source code from C:\Dev\backup-nextgeneration\packages\shared\configs\src\routes\i18n\aboutUs.ts
+
+Caused by:
+    The system cannot find the path specified. (os error 3)
+wait  - compiling...
+event - compiled client and server successfully in 15.2s (155 modules)
+warn  - Fast Refresh had to perform a full reload when ../../node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?absolutePagePath=private-next-pages%2F_app&page=%2F_app! changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+wait  - compiling /_error (client and server)...
+event - compiled client and server successfully in 92 ms (156 modules)

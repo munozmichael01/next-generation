@@ -1,0 +1,6 @@
+{
+  "name": "shared-configs",
+  "version": "0.0.1",
+  "main": "./src/routes/routes.js",
+  "types": "./src/routes/routes.d.ts"
+}
