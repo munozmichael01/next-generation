@@ -93,34 +93,25 @@ export default function MilestoneMedia({ milestoneId, media, isGeneratingPDF = f
     if (currentMedia.device && currentMedia.device !== 'none') {
       const deviceType = currentMedia.device === 'iphone' ? 'iPhone X' : 'MacBook Pro'
       const deviceWidth = currentMedia.device === 'iphone' ? 280 : 500
-      // Set max height to show only visible screen area (not the full scrollable content)
-      const maxScreenHeight = currentMedia.device === 'iphone' ? 500 : 280
 
       return (
-        <div style={{
-          maxHeight: `${maxScreenHeight + 100}px`,
-          overflow: 'hidden',
-          display: 'inline-block'
-        }}>
-          <DeviceFrameset device={deviceType} color="black" width={deviceWidth}>
-            <div style={{
-              width: '100%',
-              maxHeight: `${maxScreenHeight}px`,
-              overflow: 'hidden',
-              position: 'relative',
-              background: '#000'
-            }}>
-              <Image
-                src={currentMedia.src}
-                alt={currentMedia.alt || `${milestoneId} screenshot`}
-                width={deviceWidth}
-                height={maxScreenHeight * 2}
-                className="w-full h-auto"
-                style={{ display: 'block' }}
-              />
-            </div>
-          </DeviceFrameset>
-        </div>
+        <DeviceFrameset device={deviceType} color="black" width={deviceWidth}>
+          <div style={{
+            width: '100%',
+            height: '100%',
+            overflow: 'hidden',
+            position: 'relative',
+            background: '#fff'
+          }}>
+            <Image
+              src={currentMedia.src}
+              alt={currentMedia.alt || `${milestoneId} screenshot`}
+              fill
+              className="object-cover object-top"
+              sizes={`${deviceWidth}px`}
+            />
+          </div>
+        </DeviceFrameset>
       )
     }
 
