@@ -120,17 +120,17 @@ export default function MilestoneMedia({ milestoneId, media, isGeneratingPDF = f
       <Image
         src={currentMedia.src}
         alt={currentMedia.alt || `${milestoneId} screenshot`}
-        width={400}
-        height={300}
-        className="rounded-lg object-cover max-h-[400px] w-auto"
+        width={800}
+        height={600}
+        className="w-full h-auto object-cover"
       />
     )
   }
 
   return (
-    <div className="relative bg-carbon-200 flex items-center justify-center p-8 min-h-[400px]">
+    <div className="relative bg-carbon-200 min-h-[300px]">
       {/* Media Content */}
-      <div className="w-full h-full flex items-center justify-center">
+      <div className="w-full h-full">
         {renderMediaContent()}
       </div>
 
