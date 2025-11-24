@@ -16,6 +16,7 @@ export default function Home() {
   const t = (key: string) => getTranslation(language, key as any)
   // Media configurations for each milestone
   const milestone1Media = [
+    { type: 'image' as const, src: '/milestones/milestone-1/HomeB2C-desktop-1.jpg', device: 'none' as const, alt: 'Home B2C Desktop' },
     { type: 'image' as const, src: '/milestones/milestone-1/MisPreferencias-mobile-1.png', device: 'none' as const, alt: 'Admin B2C Mobile - Preferencias' },
     { type: 'image' as const, src: '/milestones/milestone-1/AdminB2C-MisOfertas-Small-dektop-2.png', device: 'none' as const, alt: 'Admin B2C Desktop - Mis Ofertas' },
     { type: 'image' as const, src: '/milestones/milestone-1/MiPerfil-mobile-2.jpg', device: 'none' as const, alt: 'Admin B2C Mobile - Mi Perfil' },
